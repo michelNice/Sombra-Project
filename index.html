@@ -11,32 +11,28 @@
 </head>
 <body>
     <header>
-      <!------
-
-      <div class="header-container">
-        <a href="#" class="logo">Multi-Language</a>
-        <nav class="nav-menu">
-            <a href="#">Soluções</a>
-            <a href="#">Comunidade</a>
-            <a href="#">Comprar</a>
-            <a href="#">Entrar</a>
-            <div class="language">
-                <div class="language-selected">
-                    pt-BR
+      <div class="header">
+        <div class="header-container">
+            <a href="#" class="logo">DEREK</a>
+            <nav class="nav-menu">
+                <a href="#">Home</a>
+                <a href="#">About me</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact me</a>
+                <div class="language">
+                    <div class="language-selected">
+                        en-US
+                    </div>
+                    <ul>
+                        <li><a href="#" class="br">Português</a></li> 
+                        <li><a href="#" class="en">English</a></li> 
+                        <li><a href="#" class="es">Español</a></li> 
+                    </ul>
                 </div>
-                <ul>
-                    <li><a href="#" class="br">Português</a></li> 
-                    <li><a href="#" class="en">English</a></li> 
-                    <li><a href="#" class="es">Español</a></li> 
-                </ul>
-            </div>
-        </nav>
-    </div>
-    ----->
+            </nav>
+        </div>
+      </div>
     </header>
-
-
-
 
     </header>
     <main>
@@ -60,7 +56,7 @@
             <section class="container-derek">
                 <div class="text">
                     <h3>ABOUT ME</h3>
-                    <p>
+                    <p id="title">
                         Derek, a b-boy hailing from Olinda, Pernambuco, has triumphantly clinched victory at a local event. With extensive experience in workshops, he has traveled across numerous states, showcasing his skills since 2012. His passion for breaking is matched only by his dedication to the craft, as he constantly seeks opportunities to learn and grow. Derek has collaborated with various artists, blending styles and influences to create a unique performance signature. Known for his creativity and technical prowess, he inspires younger dancers while participating in community events and competitions. Always eager to share his knowledge, Derek hosts workshops that empower others to express themselves through dance.
                     </p>
                 </div>
@@ -102,17 +98,17 @@
             <form id="form" method="post" name="emailform" action="email.php">
               <div class="form-input-grid">
                 <div>
-                  <p class="form-text">Name</p>
+                  <p class="form-text name-js">Name</p>
                   <div class="form-input-wrapper flexbox-left">
 
-                    <input class="form-input" id="uname" name="uname" type="text" placeholder="Name" aria-label="" required>
+                    <input class="form-input name-input-js" id="uname" name="uname" type="text" placeholder="Name" aria-label="" required>
                   </div>
                 </div>
                 <div>
-                <p class="form-text">LastName</p>
+                <p class="form-text lastname-js">LastName</p>
                 <div class="form-input-wrapper flexbox-left">
                   <i class="uil uil-asterisk"></i>
-                  <input class="form-input" id="pword" name="pword" type="text" placeholder="Lastname" aria-label="" required>
+                  <input class="form-input lastname-input-js" id="pword" name="pword" type="text" placeholder="Lastname" aria-label="" required>
                 </div>
               </div>
             </div>
@@ -124,15 +120,15 @@
               </div>
             </div>
             <div class="form-input-max">
-              <p class="form-text">Message</p>
-              <div id="textarea" class="form-input-wrapper flexbox-left-start">
+              <p class="form-text  message-js">Message</p>
+              <div id="textarea" class="form-input-wrapper flexbox-left-start messagem-input-js">
                 <i class="uil uil-comment-dots"></i>
-                <textarea class="form-input" id="message" name="message" placeholder="Your message" maxlength="500" aria-label="" required></textarea>
+                <textarea class="form-input input-message-js" id="message" name="message" placeholder="Your message" maxlength="500" aria-label="" required></textarea>
               </div>
              </div>
              <div class="form-input-max flexbox-left">
               <div class="button-wrapper">
-                <button id="form-button" type="submit" class="button btn-primary"><i class="uil uil-envelope-heart"></i> Send<div class="btn-secondary"></div></button>
+                <button id="form-button" type="submit" class="button btn-primary">Send<div class="btn-secondary"></div></button>
                </div>
              </div>
            </form>
