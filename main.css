@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-   
   }
   
   body {
@@ -13,9 +12,276 @@
     margin: 0;
     padding: 0;
   }
+  /*
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width:100%;
+    z-index: 100;
+  }
+  
+  .flag-container {
+    display: flex;
+  }
+  
+  .flag {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .logo-container {
+    text-align: center;
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+    
+    .flag-container, .logo-container {
+      margin-bottom: 10px;
+    }
+  }
+  */
+
+/***************************************/
 
 
 
+.header-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.logo {
+  font-size: 2.25rem;
+font-weight: 300;
+  color: #fff;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu > a {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px;
+}
+
+.nav-menu > a:hover {
+  background: #000;
+}
+
+.language {
+  position: relative;
+  width: 120px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+.language-selected {
+  display: flex;   
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.language-selected:before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://flagsapi.com/BR/flat/64.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+
+
+.language ul {
+  position: absolute;
+  width: 140px;
+  background-color: #fff;
+  border: 1px solid #f8f8f8;
+  padding-top: 10px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.language ul li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.language ul li a {
+  display: block;
+  color: #252525;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.language ul li:hover {
+  background-color: #f8f8f8;
+}
+
+.language ul li a:before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+a.br:before {
+  background-image: url('https://flagsapi.com/BR/flat/64.png');
+}
+
+a.en:before {
+  background-image: url('https://flagsapi.com/US/flat/64.png');
+}
+a.es:before {
+  background-image: url('https://flagsapi.com/ES/flat/64.png');
+}
+
+.language:hover ul {
+  display: block;
+}
+
+
+.language-selected.change-br:before {
+  background-image: url('https://flagsapi.com/BR/flat/64.png');
+}
+.language-selected.change-en:before {
+  background-image: url('https://flagsapi.com/US/flat/64.png');
+}
+.language-selected.change-es:before {
+  background-image: url('https://flagsapi.com/ES/flat/64.png');
+}
+
+
+
+
+
+
+
+
+/***************************************/
+
+
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  padding:10px;
+  width:100%;
+  margin: 0 auto;
+  background-repeat: none;
+}
+
+
+
+.main-picture {
+  grid-row: 1 / span 2;  /* Span from row 1 to row 2 */
+  grid-column: 1;
+}
+
+.main-picture img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: opacity 1s  ease-in-out, transform 0.8s;
+}
+
+.main-picture img:hover,
+.gallery-row img:hover{
+  transform: scale(0.9);
+  
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2;
+  transition: opacity 1s  ease-in-out, transform 0.8s;
+  opacity: 0.7;
+ 
+}
+
+.gallery-row img {
+  width: 32%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 1s  ease-in-out, transform 0.8s;
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+  }
+
+  .main-picture {
+      grid-row: 1;
+      grid-column: 1;
+  }
+
+  .gallery-row {
+      flex-wrap: wrap;
+      grid-column: 1;
+  }
+
+  .gallery-row img {
+      width: 48%;
+      margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-row img {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .gallery-row img {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+/****************************************/
 
   h2.padded-multi-line {
     font: 50px sans-serif;
@@ -391,38 +657,31 @@
   text-align: center;
   margin: auto;
 
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   
-  grid-auto-rows: 280px 150px;
+  grid-auto-rows: 180px 150px;
   
   grid-auto-flow: dense;
+  object-fit: cover;
 }
 
 
 
-.item {
-  img {
-    width:100%;
-    height:100%;
-    object-fit: cover;
-  }
-  
- 
-  @media (min-width: 480px) {
-    
-    
-    &:first-child {
-      grid-area: 1 / 1 / span 2 / span 2;
-    }
-      
-
-    &:nth-child(3n) {
-      grid-column: span 2;
-    }
-    
-  }
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+@media (min-width: 480px) {
+  .item:first-child {
+    grid-area: 2 / 2 / span 1 / span 1;
+  }
+
+  .item:nth-child(3n) {
+    grid-column: span 2;
+  }
+}
 
 
 
@@ -720,6 +979,16 @@ header{
     background-size: cover;
     background-position: center;
     height: 100vh;
-    padding: 0;
-    margin:0;
+   width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
