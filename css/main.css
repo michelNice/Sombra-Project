@@ -134,7 +134,7 @@ font-weight: 300;
 
 .language ul li a {
   display: block;
-  color: #252525;
+  color:var(--black--ish);
   padding: 5px 10px;
 }
 
@@ -523,7 +523,7 @@ a.es:before {
     font-size: 30px;
     line-height: 60px;
     transition: .3s;
-    color: #000;
+    color:var(--black--);
 }
 
 .social-menu ul li .fab:hover{
@@ -844,13 +844,10 @@ textarea::-webkit-scrollbar-thumb {
   border:1px solid #fff;
 }
 
-
-
-
 #form-button {
   font-size: 1.22rem;
 }
-/* Button */
+
 .button-wrapper {
   margin: 2em 0 1em 0;
 }
