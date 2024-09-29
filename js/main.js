@@ -47,11 +47,6 @@ $(function() {
 });
 
 
-
-
-
-
-
 //english
 $(function() {
     $(".en").click(function() {
@@ -100,16 +95,6 @@ $(function() {
 });
 
 
-
-
-
-
-
-
-
-
-
-
 //english
 $(function() {
     $(".es").click(function() {
@@ -118,7 +103,7 @@ $(function() {
         $(".nav-menu").children().eq(1).text("Acerca de mí");
         $(".nav-menu").children().eq(2).text("galería");
         $(".nav-menu").children().eq(3).text("Contáctame");
-        $(".language-selected").text("en-US");
+        $(".language-selected").text("es-ES");
         $(".language-selected").removeClass("change-en");
         $(".language-selected").removeClass("change-br");
         $(".language-selected").addClass("change-es");
@@ -159,4 +144,28 @@ $(function() {
         $(".about-container ul:nth-child(2) li:nth-child(2) a").text("Central de Ajuda");
         $(".about-container ul:nth-child(2) li:nth-child(3) a").text("Termos e Políticas");
     });
+});
+
+
+
+
+
+
+
+// Sticky Navbar
+window.onscroll = function() {
+    const header = document.querySelector('.header');
+    const stickyPoint = header.offsetHeight / 2;
+    if (window.pageYOffset > stickyPoint) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+};
+
+// Hamburger Menu Toggle
+const hamburger = document.querySelector('.hamburger-menu');
+const navMenu = document.querySelector('.nav-menu');
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });

@@ -50,7 +50,7 @@ header h1{
  /***************************************/
 
 .header-container {
-max-width:1000px;
+max-width:1200px;
 margin: 0 auto;
 }
 
@@ -68,8 +68,8 @@ margin: 0 auto;
 }
 
 a.logo {
-  font-size: 2.25rem;
-font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 300;
   color:var(--white--);
 }
 
@@ -101,6 +101,7 @@ font-weight: 300;
   color: var(--white--);
   cursor: pointer;
 }
+  
 .language-selected:before {
   content: '';
   display: inline-block;
@@ -128,7 +129,6 @@ font-weight: 300;
   background-color:var(--white--);
   border: 1px solid #f8f8f8;
   padding-top: 10px;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
   display: none;
 }
 
@@ -169,21 +169,25 @@ a.es:before {
 }
 
 @media (max-width:61.25rem) {
+  
   .header-container {
       display: block;
       text-align: center;
   }
+  
 
   a.logo {
-      margin: 0 auto;
+      /*margin: 0 auto;*/
+      padding:0 0.9rem ;
   }
-
+  
   .nav-menu {
       justify-content: center;
   }
   .language {
       text-align: left;
   }
+  
 }
 
 @media (max-width: 739px) {
@@ -191,41 +195,198 @@ a.es:before {
       font-size: 2em;
   }
   .nav-menu {
-      display: block;
+      /*display: block;
       max-width: 500px;
-      margin: 10px auto 0 auto;
+      /*margin: 10px auto 0 auto;*/
   }
   .nav-menu > a {
       font-size: 0.9em;
   }
   .language {
       display: block;
-      margin: 10px auto 0 auto;
+      /*margin: 10px auto 0 auto;*/
   }
 }
 
 @media (max-width: 380px) {
   .nav-menu > a {
-      line-height: 2em;
+      /*line-height: 2em;*/
   }
 }
 
 
 @media (max-width: 380px) {
   .about-container {
-      max-width: 380px;
+      /*max-width: 380px;*
       display: block;
       text-align: center;
+      */
   }
   .about-container ul:nth-child(1):after {
+    /*
       content: '';
       display: block;
-      width: 90px;
+      /*width: 90px;*/
       height: 1px;
       background: #8b8b8b;
-      margin: 10px auto;
+      /*margin: 10px auto;*/
   }
 }
+/****************************************/
+/* Base Styling */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header {
+  background-color: transparent;
+  padding: 20px 0;
+  position: relative;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+a.logo {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--white--);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu > a {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: var(--white--);
+  padding: 10px;
+}
+
+.nav-menu > a:hover {
+  background: var(--black--);
+}
+
+/* Sticky Navigation */
+.sticky {
+  background-color: var(--black--ish);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.language {
+  position: relative;
+  width: 120px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+
+.language-selected {
+  display: flex;
+  align-items: center;
+  color: var(--white--);
+  cursor: pointer;
+}
+
+.language-selected:before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://flagsapi.com/US/flat/64.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+
+
+
+
+/* Language Selector */
+.language ul {
+  position: absolute;
+  width: 140px;
+  background-color: var(--white--);
+  border: 1px solid #f8f8f8;
+  padding-top: 10px;
+  display: none;
+}
+
+.language ul li a {
+  display: block;
+  color: var(--black--ish);
+  padding: 5px 10px;
+}
+
+.language ul li:hover {
+  background-color: #f8f8f8;
+}
+
+/* Show Dropdown */
+.language:hover ul {
+  display: block;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--white--);
+  margin: 4px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      background-color: var(--black--ish);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+  }
+
+  .nav-menu.active {
+      display: flex;
+  }
+
+  .hamburger-menu {
+      display: flex;
+  }
+
+  .language {
+      margin-left: 0;
+  }
+
+  .language, .hamburger-menu {
+      position: relative;
+      align-self: flex-end;
+      margin-right: 20px;
+  }
+}
+
+/* Sticky Functionality */
+
+
 
  /***************************************/
           /*GALLERY  PHOTOS*/
@@ -506,7 +667,6 @@ a.es:before {
 /********************************/
 
 .social-menu ul{
- 
     display: flex;
     align-content: center;
     justify-content: center;
@@ -558,10 +718,9 @@ a.es:before {
 .social-menu ul li:nth-child(4) a:hover{
     background-color:var(--black--);
 }
-/************************************************/
-
-
-
+/***************************************/
+                /**/
+/****************************************/
 
 
 @media(max-width:70rem){
@@ -575,11 +734,9 @@ a.es:before {
     height: 100%;
   }
   
-  
   .container-derek p{
     padding:0 .7rem;
   }
-  
   
   header h1 {
     text-align: center;
@@ -645,8 +802,6 @@ a.es:before {
     object-fit: cover;
   }
   
- 
-    
     &:first-child {
       grid-area: 1 / 1 / span 2 / span 2;
     }
@@ -669,16 +824,11 @@ a.es:before {
 
 
 .container-derek {
-
   width:100%;
-  align-content: center;
-  margin: auto;
   flex-direction: column;
 }
   
-  
   }
-  
 }
 
 
@@ -698,13 +848,9 @@ a.es:before {
   }
 }
 
-
-
-
-
-
-
-
+/***************************************/
+                /*Form*/
+/****************************************/
 
 
 textarea {
@@ -769,7 +915,7 @@ textarea::-webkit-scrollbar-thumb {
   justify-content: space-between;
   align-items: center;
 }
-/* Form */
+
 .form-wrapper {
   width: 100%;
   display: flex;
@@ -929,23 +1075,23 @@ textarea::-webkit-scrollbar-thumb {
  
 
 
-  /* Form */
+
   #form {
       width: 95%;
   }
 }
 @media only screen and (max-width: 756px) {
   :root {
-      /* Sizes */
+ 
       --heading: 2.2rem;
   }
-  /* Form */
+  
   #form {
       width: 90%;
   }
 }
 @media only screen and (max-width: 576px) {
-  /* Form */
+ 
   .form-input-grid {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
