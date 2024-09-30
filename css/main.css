@@ -203,7 +203,8 @@ a.es:before {
       font-size: 0.9em;
   }
   .language {
-      display: block;
+      display:block;
+
       /*margin: 10px auto 0 auto;*/
   }
 }
@@ -226,7 +227,7 @@ a.es:before {
     /*
       content: '';
       display: block;
-      /*width: 90px;*/
+      /*width: 90px;
       height: 1px;
       background: #8b8b8b;
       /*margin: 10px auto;*/
@@ -286,7 +287,7 @@ a.logo {
 .language {
   position: relative;
   width: 120px;
-  margin-left: 40px;
+  margin-left:40px;
   font-weight: bold;
 }
 
@@ -305,7 +306,7 @@ a.logo {
   background-image: url('https://flagsapi.com/US/flat/64.png');
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 10px;
+  margin-right:20ppx;
 }
 
 
@@ -380,7 +381,7 @@ a.logo {
   .language, .hamburger-menu {
       position: relative;
       align-self: flex-end;
-      margin-right: 20px;
+      margin-right:20px;
   }
 }
 
