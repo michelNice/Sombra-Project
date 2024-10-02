@@ -796,6 +796,7 @@ textarea::-webkit-scrollbar-thumb {border-radius: 5em;}
 .form-text {
   margin: 1em 0 .75em 2.2em;
   font-weight: 300;
+  
 }
 .form-input-grid {
   margin: 1.5em 0;
@@ -826,9 +827,18 @@ textarea::-webkit-scrollbar-thumb {border-radius: 5em;}
   border-radius: 0.6em;
   border: 2px solid var(--bc-gray);
   transition: border .15s ease-in-out;
-  background: var(--black--ish);
   border:1px solid var(--white--);
+  color:var(--white--ish);
+  background-color: var(--black--ish);
 }
+
+input:focus {
+  background-color:var(--black--ish); 
+  outline: none;
+}
+
+.form-input:link{ background-color: var(--black--ish);}
+
 
 #form-button {font-size: 1.22rem;}
 
