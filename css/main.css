@@ -6,6 +6,7 @@
     --white--:#fff;
     --black--:#000;
     --black--ish:#252525;
+    --white--ish:#f8f8f8;
  }
  
  *{
@@ -16,19 +17,16 @@
   
   body {
     font-family: Arial;
-    background-color: #252525;
+    background-color:var(--black--ish);
     color: var(--white--);
     font-family: 'Righteous', sans-serif;
     margin: 0;
     padding: 0;
   }
 
- a{ text-decoration: none;
-}
+ a{ text-decoration: none;}
 
-li {
-list-style: none;
-}
+li {list-style: none}
 
 
 header{
@@ -50,22 +48,17 @@ header h1{
  /***************************************/
 
 .header-container {
-max-width:1200px;
-margin: 0 auto;
+  max-width:75rem;
+  margin: 0 auto;
 }
 
 
 .header {
   background-color:var(--black--ish);
-  padding: 20px 0;
+  padding: 1.25rem 0;
   
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 a.logo {
   font-size: 1.5rem;
@@ -85,14 +78,12 @@ a.logo {
   padding: 10px;
 }
 
-.nav-menu > a:hover {
-  background:var(--black--);
-}
+.nav-menu > a:hover {background:var(--black--);}
 
 .language {
   position: relative;
   width: 120px;
-  margin-left: 40px;
+  margin-left:2.5rem;
   font-weight: bold;
 }
 .language-selected {
@@ -110,7 +101,7 @@ a.logo {
   background-image: url('https://flagsapi.com/US/flat/64.png');
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 10px;
+  margin-right:0.625rem;
 }
 
 .language-selected.change-br:before {
@@ -127,20 +118,18 @@ a.logo {
   position: absolute;
   width: 140px;
   background-color:var(--white--);
-  border: 1px solid #f8f8f8;
-  padding-top: 10px;
+  border: 1px solid var(--white--ish);
+  padding-top:0.625rem;
   display: none;
 }
 
 .language ul li a {
   display: block;
   color:var(--black--ish);
-  padding: 5px 10px;
+  padding: 0.313rem 0.625rem;
 }
 
-.language ul li:hover {
-  background-color: #f8f8f8;
-}
+.language ul li:hover {background-color: var(--white--ish);}
 
 .language ul li a:before {
   content: '';
@@ -150,7 +139,7 @@ a.logo {
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
 a.br:before {
@@ -164,9 +153,7 @@ a.es:before {
   background-image: url('https://flagsapi.com/ES/flat/64.png');
 }
 
-.language:hover ul {
-  display: block;
-}
+.language:hover ul {display: block;}
 
 @media (max-width:61.25rem) {
   
@@ -175,68 +162,21 @@ a.es:before {
       text-align: center;
   }
   
-
-  a.logo {
-      /*margin: 0 auto;*/
-      padding:0 0.9rem ;
-  }
+  a.logo {padding:0 0.9rem ;}
   
-  .nav-menu {
-      justify-content: center;
-  }
-  .language {
-      text-align: left;
-  }
+  .nav-menu {justify-content: center;}
+
+  .language {text-align: left;}
   
 }
 
-@media (max-width: 739px) {
-  a.logo {
-      font-size: 2em;
-  }
-  .nav-menu {
-      /*display: block;
-      max-width: 500px;
-      /*margin: 10px auto 0 auto;*/
-  }
-  .nav-menu > a {
-      font-size: 0.9em;
-  }
-  .language {
-      display:block;
+@media (max-width: 46.188rem) {
 
-      /*margin: 10px auto 0 auto;*/
-  }
+  a.logo {font-size: 2em;}
 }
 
-@media (max-width: 380px) {
-  .nav-menu > a {
-      /*line-height: 2em;*/
-  }
-}
-
-
-@media (max-width: 380px) {
-  .about-container {
-      /*max-width: 380px;*
-      display: block;
-      text-align: center;
-      */
-  }
-  .about-container ul:nth-child(1):after {
-    /*
-      content: '';
-      display: block;
-      /*width: 90px;
-      height: 1px;
-      background: #8b8b8b;
-      /*margin: 10px auto;*/
-  }
-}
-/****************************************/
-/* Base Styling */
 .header-container {
-  max-width: 1200px;
+  max-width:75rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -246,7 +186,7 @@ a.es:before {
 
 .header {
   background-color: transparent;
-  padding: 20px 0;
+  padding: 1.5rem 0;
   position: relative;
   z-index: 10;
   transition: background-color 0.3s ease;
@@ -267,78 +207,24 @@ a.logo {
   font-size: 1em;
   text-transform: uppercase;
   color: var(--white--);
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .nav-menu > a:hover {
   background: var(--black--);
 }
 
-/* Sticky Navigation */
+
 .sticky {
   background-color: var(--black--ish);
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 10px 0;
+  padding: 0.625rem 0;
   transition: background-color 0.3s ease;
 }
 
-.language {
-  position: relative;
-  width: 120px;
-  margin-left:40px;
-  font-weight: bold;
-}
 
-.language-selected {
-  display: flex;
-  align-items: center;
-  color: var(--white--);
-  cursor: pointer;
-}
-
-.language-selected:before {
-  content: '';
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background-image: url('https://flagsapi.com/US/flat/64.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right:20ppx;
-}
-
-
-
-
-
-/* Language Selector */
-.language ul {
-  position: absolute;
-  width: 140px;
-  background-color: var(--white--);
-  border: 1px solid #f8f8f8;
-  padding-top: 10px;
-  display: none;
-}
-
-.language ul li a {
-  display: block;
-  color: var(--black--ish);
-  padding: 5px 10px;
-}
-
-.language ul li:hover {
-  background-color: #f8f8f8;
-}
-
-/* Show Dropdown */
-.language:hover ul {
-  display: block;
-}
-
-/* Hamburger Menu */
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -353,8 +239,8 @@ a.logo {
   margin: 4px 0;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
+
+@media (max-width: 48rem) {
   .nav-menu {
       display: none;
       flex-direction: column;
@@ -363,29 +249,21 @@ a.logo {
       top: 60px;
       left: 0;
       width: 100%;
-      padding: 20px 0;
+      padding:1.25rem 0;
   }
 
-  .nav-menu.active {
-      display: flex;
-  }
+  .nav-menu.active {display: flex;}
 
-  .hamburger-menu {
-      display: flex;
-  }
+  .hamburger-menu {display: flex;}
 
-  .language {
-      margin-left: 0;
-  }
+  .language {margin-left: 0;}
 
   .language, .hamburger-menu {
       position: relative;
       align-self: flex-end;
-      margin-right:20px;
+      margin-right:1.25rem;
   }
 }
-
-/* Sticky Functionality */
 
 
 
@@ -397,8 +275,8 @@ a.logo {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(2, auto);
-  gap: 10px;
-  padding:10px;
+  gap: 0.625rem;
+  padding:0.625rem;
   width:100%;
   margin: 0 auto;
   background-repeat: none;
@@ -420,10 +298,8 @@ a.logo {
 }
 
 .main-picture img:hover,
-.gallery-row img:hover{
-  transform: scale(0.9);
-  
-}
+.gallery-row img:hover{transform: scale(0.9);}
+
 
 .gallery-row {
   display: flex;
@@ -441,7 +317,7 @@ a.logo {
   transition: opacity 1s  ease-in-out, transform 0.8s;
 }
 
-@media (max-width: 768px) {
+@media (max-width:48rem) {
   .gallery-container {
       grid-template-columns: 1fr;
       grid-template-rows: auto;
@@ -459,18 +335,18 @@ a.logo {
 
   .gallery-row img {
       width: 48%;
-      margin-bottom: 10px;
+      margin-bottom:0.625rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width:30rem) {
   .gallery-row img {
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom:0.625rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width:30rem) {
   .gallery-row img {
       width: 100%;
       margin-bottom: 10px;
@@ -488,20 +364,20 @@ a.logo {
   height: 100%;
   left: 50%;
   top: 50%;
-  max-width:1850px;
+  max-width:115.625rem;
   transform: translateX(-50%) translateY(-50%);
  
 }
 
 
 .image-gallery {
-  padding: 20px;
+  padding:1.25rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .image-gallery .gallery-items {
-  margin: 15px;
+  margin:0.938rem;
   width: 300px;
   height: 300px;
   background-color: #f9f9f9;
@@ -609,7 +485,7 @@ a.logo {
 /****************************************/
 
   h2.padded-multi-line {
-    font: 50px sans-serif;
+    font:3.125rem sans-serif;
     text-align: center;
     font-weight: bold;
     width: 50%;
@@ -640,7 +516,7 @@ a.logo {
 
 
 
-  .container-derek {
+.container-derek {
     text-align: center;
     display: flex;
     align-items: center;
@@ -677,12 +553,12 @@ a.logo {
 
 .social-menu ul li{
     list-style: none;
-    margin: 0 15px;
+    margin: 0 0.938rem;
 }
 
 .social-menu ul li .fab{
-    font-size: 30px;
-    line-height: 60px;
+    font-size: 1.875rem;
+    line-height:3.75rem;
     transition: .3s;
     color:var(--black--);
 }
@@ -703,49 +579,35 @@ a.logo {
     box-shadow: 0 5px 4px rgba(0,0,0,.5);
 }
 
-.social-menu ul li a:hover{
-    transform: translate(0, -10%);
-}
+.social-menu ul li a:hover{transform: translate(0, -10%);}
 
-.social-menu ul li:nth-child(1) a:hover{
-    background-color:#FF0000;
-}
-.social-menu ul li:nth-child(2) a:hover{
-    background-color: #E4405F;
-}
-.social-menu ul li:nth-child(3) a:hover{
-    background-color: #0077b5;
-}
-.social-menu ul li:nth-child(4) a:hover{
-    background-color:var(--black--);
-}
+.social-menu ul li:nth-child(1) a:hover{background-color:#FF0000;}
+
+.social-menu ul li:nth-child(2) a:hover{background-color: #E4405F;}
+
+.social-menu ul li:nth-child(3) a:hover{background-color: #0077b5;}
+
+.social-menu ul li:nth-child(4) a:hover{background-color:var(--black--);}
 /***************************************/
                 /**/
-/****************************************/
+/***************************************/
 
 
 @media(max-width:70rem){
 
-  header h1{
-    font-size:1rem;
-  }
+  header h1{font-size:1rem;}
   
   .image-gallery .gallery-items .item img {
     width:100%;
     height: 100%;
   }
   
-  .container-derek p{
-    padding:0 .7rem;
-  }
+  .container-derek p{padding:0 .7rem;}
   
   header h1 {
     text-align: center;
     margin: 2rem;
   }
-  
-  
- 
   
   .container-derek iframe,
   .container-derek p {
@@ -754,7 +616,6 @@ a.logo {
   }
   
  
-  
   .social-menu ul {
     display: flex;
     justify-content: center;
@@ -774,7 +635,7 @@ a.logo {
     box-shadow: 0 5px 4px rgba(0, 0, 0, .5);
   }
   
-  @media(max-width:1368px) {
+  @media(max-width:85.5rem) {
 
    
     .gallery-items {
@@ -790,38 +651,27 @@ a.logo {
       width: 40px;
       height: 40px;
       border-radius: 50%;
-    
-    
   }
-
-
-  
 .item {
+  
   img {
     width:100%;
     height:100%;
     object-fit: cover;
   }
   
-    &:first-child {
-      grid-area: 1 / 1 / span 2 / span 2;
-    }
-      
+    &:first-child {grid-area: 1 / 1 / span 2 / span 2;}
 
-    &:nth-child(3n) {
-      grid-column: span 2;
-    }
+    &:nth-child(3n) {grid-column: span 2;}
   
 }
 
   .social-menu ul li .fab{
-    font-size: 20px;
-    line-height:40px;
+    font-size:1.25rem;
+    line-height:2.5rem;
 }
 
-#form {
-  width:100%;
-}
+#form {width:100%;}
 
 
 .container-derek {
@@ -839,19 +689,16 @@ a.logo {
   object-fit: cover;
 }
 
-@media (min-width: 480px) {
-  .item:first-child {
-    grid-area: 2 / 2 / span 1 / span 1;
-  }
+@media (min-width:30rem) {
 
-  .item:nth-child(3n) {
-    grid-column: span 2;
-  }
+  .item:first-child {grid-area: 2 / 2 / span 1 / span 1;}
+
+  .item:nth-child(3n) {grid-column: span 2;}
 }
 
 /***************************************/
                 /*Form*/
-/****************************************/
+/***************************************/
 
 
 textarea {
@@ -859,20 +706,17 @@ textarea {
   transition: opacity .15s ease-in-out;
   resize: none;
 }
-textarea::-webkit-scrollbar-track {
-  background-color: transparent;
-}
+textarea::-webkit-scrollbar-track {background-color: transparent;}
+
 textarea::-webkit-scrollbar {
   width: 8px;
   background-color: transparent;
 }
-textarea::-webkit-scrollbar-thumb {
-  border-radius: 5em;
-}
 
-.space {
-  min-height:0vh;
-}
+textarea::-webkit-scrollbar-thumb {border-radius: 5em;}
+
+.space {min-height:0vh;}
+
 .flexbox {
   display: flex;
   justify-content: center;
@@ -923,12 +767,11 @@ textarea::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
 }
-#form {
-  width:60%;
-}
-.form {
-  width: 100%;
-}
+#form {width:60%}
+
+.form {width: 100%;}
+
+
 .form-title {
   margin: 1em 0 0 0;
   font-size: var(--heading);
@@ -960,9 +803,8 @@ textarea::-webkit-scrollbar-thumb {
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 1.5em;
 }
-.form-input-max {
-  margin: 1.5em 0;
-}
+.form-input-max {margin: 1.5em 0;}
+
 .form-input-wrapper {
   width: 100%;
   position: relative;
@@ -973,12 +815,9 @@ textarea::-webkit-scrollbar-thumb {
   font-size: 1.88rem;
  
 }
-#textarea textarea {
-  border-radius: 2.25em;
-}
-#textarea i {
-  top: .6em;
-}
+#textarea textarea {border-radius: 2.25em}
+
+#textarea i {top: .6em;}
 
 .form-input {
   width: 100%;
@@ -987,17 +826,14 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 0.6em;
   border: 2px solid var(--bc-gray);
   transition: border .15s ease-in-out;
-  background: #252525;
-  border:1px solid #fff;
+  background: var(--black--ish);
+  border:1px solid var(--white--);
 }
 
-#form-button {
-  font-size: 1.22rem;
-}
+#form-button {font-size: 1.22rem;}
 
-.button-wrapper {
-  margin: 2em 0 1em 0;
-}
+.button-wrapper {margin: 2em 0 1em 0;}
+
 .button, .btn-secondary {
   margin: 0;
   width: 100%;
@@ -1043,22 +879,16 @@ textarea::-webkit-scrollbar-thumb {
   bottom: -5px;
 }
 
-@media only screen and (max-width: 1660px) {
-  :root {
-      --heading: 3rem;
-  }
+@media only screen and (max-width:103.75rem) {
+
+  :root {--heading: 3rem;}
 }
-@media only screen and (max-width: 1456px) {
-  :root {
-      
-      --heading: 2.8rem;
-  }
+@media only screen and (max-width: 91rem) {
+
+  :root {--heading: 2.8rem;}
 }
-@media only screen and (max-width: 1024px) {
-  :root {
-      
-      --heading: 2.4rem;
-  }
+@media only screen and (max-width:64rem) {
+  :root {--heading: 2.4rem;}
 
   
 
@@ -1068,30 +898,19 @@ textarea::-webkit-scrollbar-thumb {
  
   }
   
- 
-  header{
-    height:60vh;
-  }
+  header{height:60vh;}
   
  
-
-
-
-  #form {
-      width: 95%;
-  }
+  #form {width: 95%;}
 }
-@media only screen and (max-width: 756px) {
-  :root {
- 
-      --heading: 2.2rem;
-  }
+@media only screen and (max-width: 47.25rem) {
+
+  :root {--heading: 2.2rem;}
   
-  #form {
-      width: 90%;
-  }
+  #form {width: 90%;}
+
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 36rem) {
  
   .form-input-grid {
       grid-template-columns: 1fr;
@@ -1100,11 +919,8 @@ textarea::-webkit-scrollbar-thumb {
       grid-row-gap: 1.5em;
   }
 }
-@media only screen and (max-width: 496px) {
-  :root {
-     
-      --heading: 1.75rem;
-  }
+@media only screen and (max-width:31rem) {
+  :root {--heading: 1.75rem;}
 
 }
 
