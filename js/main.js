@@ -1,4 +1,4 @@
-//Português
+
 $(function() {
     $(".br").click(function() {
         //cabeçalho
@@ -38,11 +38,7 @@ $(function() {
 
 
 
-        $(".about-container ul:nth-child(1) li:nth-child(2) a").text("Visão Geral");
-        $(".about-container ul:nth-child(1) li:nth-child(3) a").text("Pagamentos");
-        $(".about-container ul:nth-child(2) li:nth-child(1) a").text("Suporte");
-        $(".about-container ul:nth-child(2) li:nth-child(2) a").text("Central de Ajuda");
-        $(".about-container ul:nth-child(2) li:nth-child(3) a").text("Termos e Políticas");
+    
     });
 });
 
@@ -85,12 +81,6 @@ $(function() {
 
 
 
-        $(".about-container ul:nth-child(1) li:nth-child(1) a").text("Soluções");
-        $(".about-container ul:nth-child(1) li:nth-child(2) a").text("Visão Geral");
-        $(".about-container ul:nth-child(1) li:nth-child(3) a").text("Pagamentos");
-        $(".about-container ul:nth-child(2) li:nth-child(1) a").text("Suporte");
-        $(".about-container ul:nth-child(2) li:nth-child(2) a").text("Central de Ajuda");
-        $(".about-container ul:nth-child(2) li:nth-child(3) a").text("Termos e Políticas");
     });
 });
 
@@ -137,17 +127,8 @@ $(function() {
 
 
 
-        $(".about-container ul:nth-child(1) li:nth-child(1) a").text("Soluções");
-        $(".about-container ul:nth-child(1) li:nth-child(2) a").text("Visão Geral");
-        $(".about-container ul:nth-child(1) li:nth-child(3) a").text("Pagamentos");
-        $(".about-container ul:nth-child(2) li:nth-child(1) a").text("Suporte");
-        $(".about-container ul:nth-child(2) li:nth-child(2) a").text("Central de Ajuda");
-        $(".about-container ul:nth-child(2) li:nth-child(3) a").text("Termos e Políticas");
     });
 });
-
-
-
 
 
 
@@ -169,15 +150,6 @@ const navMenu = document.querySelector('.nav-menu');
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
-
-
-
-
-
-
-
-
-
 
 
 
