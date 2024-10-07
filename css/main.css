@@ -281,8 +281,9 @@ transition: background-color 0.3s ease;
 
   .language, .hamburger-menu {
     position: relative;
-    align-self: flex-end;
+    align-self: center;
     margin-right: 1.25rem;
+    align-content: center;
   }
 }
 
