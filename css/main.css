@@ -222,6 +222,7 @@ top: 0;
 width: 100%;
 padding: 0.625rem 0;
 transition: background-color 0.3s ease;
+box-shadow:1px 1px 4px -4px #999;
 }
 
 .hamburger-menu {
@@ -358,7 +359,7 @@ transition: opacity 1s  ease-in-out, transform 0.8s;
 }
 
 .gallery-row img {
-    width: 48%;
+    width:100%;
     margin-bottom:0.625rem;
 }
 }
