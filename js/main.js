@@ -143,13 +143,24 @@ window.onscroll = function() {
   }
 };
 
-// Hamburger Menu Toggle
+/*
 const hamburger = document.querySelector('.hamburger-menu');
 const navMenu = document.querySelector('.nav-menu');
 hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
 });
+*/
 
+
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburgerMenu.addEventListener('click', () => {
+  // Toggle the 'active' class on the menu and hamburger icon
+  hamburgerMenu.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
 
 
 // Select all links with hashes
