@@ -263,6 +263,7 @@ transition: background-color 0.3s ease;
     left: 0;
     width: 100%;
     padding: 1.25rem 0;
+    align-items: center;
   }
 
   .nav-menu.active {
@@ -275,12 +276,14 @@ transition: background-color 0.3s ease;
 
   .language {
     margin-left: 0;
+   
   }
 
   .language, .hamburger-menu {
     position: relative;
-    align-self: flex-end;
+    align-self:center;
     margin-right: 1.25rem;
+    justify-content: center;
   }
 }
 
