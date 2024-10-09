@@ -166,6 +166,13 @@ hamburgerMenu.addEventListener('click', () => {
 
 
 
+function clearText() {
+  // Process the form submission here
+  alert("Form submitted!");
+
+  // Clear the form inputs
+  document.getElementById("myForm").reset();
+}
 
 
 
@@ -207,3 +214,55 @@ $('a[href*="#"]')
    }
  }
 });
+
+
+
+
+
+document.querySelector('#form').addEventListener('submit', function (event) {
+  event.preventDefault();  // Prevent form from submitting the default way
+
+  let form = event.target;
+  let formData = new FormData(form);
+  let email = form.querySelector('input[type="email"]').value;
+
+  // Check if the email domain is allowed (Gmail, Hotmail, iCloud)
+  if (!validateEmailDomain(email)) {
+    alert('Please use a valid Gmail, Hotmail, or iCloud email address.');
+    return;
+  }
+
+  // Submit the form using fetch
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())  // Parse the JSON response
+  .then(data => {
+    if (data.success) {
+      // If the submission is successful, clear the form after 2 seconds
+      setTimeout(() => {
+        form.querySelectorAll('input[type="text"], input[type="email"]').forEach(input => input.value = '');
+        form.querySelectorAll('textarea').forEach(textarea => textarea.value = '');
+      }, 2000);  // 2000 milliseconds = 2 seconds
+      alert('Form submitted successfully!');
+    } else {
+      alert('Form submission failed. Please try again.');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again.');
+  });
+});
+
+// Function to validate email domain
+function validateEmailDomain(email) {
+  const allowedDomains = ['gmail.com', 'hotmail.com', 'icloud.com'];
+  const emailDomain = email.split('@')[1];
+  return allowedDomains.includes(emailDomain);
+}
+
+
+
+
