@@ -184,14 +184,13 @@ document.querySelector('#form').addEventListener('submit', function (event) {
     method: 'POST',
     body: formData
   })
-  .then(response => response.json())  // Parse the JSON response
+  .then(response => response.json())  
   .then(data => {
     if (data.success) {
-      // If the submission is successful, clear the form after 2 seconds
       setTimeout(() => {
         form.querySelectorAll('input[type="text"], input[type="email"]').forEach(input => input.value = '');
         form.querySelectorAll('textarea').forEach(textarea => textarea.value = '');
-      }, 2000);  // 2000 milliseconds = 2 seconds
+      }, 2000);  
       alert('Form submitted successfully!');
     } else {
       alert('Form submission failed. Please try again.');
