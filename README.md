@@ -1,12 +1,14 @@
-Break Dance Portfolio
+# Break Dance Portfolio
 Welcome to my Break Dance Portfolio! This project showcases a dynamic and interactive portfolio for breakdancing, built using HTML, CSS, JavaScript, and jQuery.
 
-Desktop View
+## Desktop View
+
  ![Alt text](desktop.gif)
 
 
 
-Mobile View
+## Mobile View
+
  ![Alt text](mobile.gif)
 
 💻 Technologies Used
