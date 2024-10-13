@@ -42,7 +42,6 @@ text-align: center;
 margin: 2rem;
 }
 
-
 /***************************************/
             /*NAVEGATION*/
 /***************************************/
@@ -256,20 +255,7 @@ box-shadow:1px 2px 4px -4px #999;
 }
 
 @media (max-width: 48rem) {
-  /*
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: var(--black--ish);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 1.25rem 0;
-    align-items: center;
-    border: 1px solid #fff;
-  }
-  */
+  
 
   .nav-menu {
     display: flex;
